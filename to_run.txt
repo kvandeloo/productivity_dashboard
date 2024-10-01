@@ -1,0 +1,17 @@
+To run: 
+Copy the report_card folder to your utility machine
+run_report.py > edit with notepad++
+set parameters:
+* resources_to_include = ['Resource One','Resource Two','Resource Three']
+* file_location = r'C:\Users\yourname\file_path_up_to_where_your_report_card_folder_is\report_card'
+* lookback_months = 12 (haven't tested with other values, but should be able to set this to a number like 6 or 9 to get the average over that number of months for the out_csv values)
+* categories = list of dictionaries for the categories you want to run, includes a checkbox_include value that can be set to 0 or 1 so we can use this in excel to indicate whether a category should be included for calculations
+Save and close run_report.py
+Right click on run_report.py > open with > python
+
+The program will take a few seconds to run, but should be less than a minute. It
+1) generates an out_csv file in your report_card folder with the csv data
+2) displays trends over time (monthly averages for the past 12+ months)
+
+Troubleshooting:
+Keep an eye on your terminal. You might need to pip install additional python modules for this to run. 
